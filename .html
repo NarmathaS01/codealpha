@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href=".css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="C:\Users\narmatha\Downloads\fitness.jpg" alt="Fitness Logo" height="2500" width="5000" class="logo">
+            <h1>Fitness Tracker</h1>
+        </header>
+        <section id="record-workout">
+            <h2>Record Workout</h2>
+            <form id="workout-form">
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Workout Type:</label>
+                    <select id="type" required>
+                        <option value="Running">Running</option>
+                        <option value="Cycling">Cycling</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Weight Lifting">Weight Lifting</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Hiking">Hiking</option>
+                        <option value="Basketball">Basketball</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration-hours">Duration (hours):</label>
+                    <input type="number" id="duration-hours" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="duration-minutes">Duration (minutes):</label>
+                    <input type="number" id="duration-minutes" min="0" max="59" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="distance">Distance (km):</label>
+                    <input type="number" id="distance" min="0" step="1">
+                </div>
+                <button type="submit">Add Workout</button>
+            </form>
+        </section>
+        <section id="set-goal">
+            <h2>Set Fitness Goal</h2>
+            <form id="goal-form">
+                <div class="form-group">
+                    <label for="goal">Weekly Goal (minutes):</label>
+                    <input type="number" id="goal" required>
+                </div>
+                <button type="submit">Set Goal</button>
+            </form>
+        </section>
+        <section id="progress">
+            <h2>Progress</h2>
+            <p id="total-duration">Total Duration: 0 minutes</p>
+            <p id="goal-status">Goal Status: Not Set</p>
+        </section>
+        <section id="workout-history">
+            <h2>Workout History</h2>
+            <ul id="workouts">
+                <!-- Workout entries will appear here -->
+            </ul>
+        </section>
+    </div>
+    <script src=".js"></script>
+</body>
+</html>
